@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            /* width: 200px; */
+            height: 200px;
+            margin: 20px auto;
+            padding: 50px;
+            background: rgb(32, 178, 170);
+
+        }
+        .oter_animation {
+            width: 420px;
+            height: 200px;
+            overflow: hidden;
+            border: 2px solid black;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .oter_animation > div {
+            width: 400px;
+            height: 150px;
+            border: 1px solid red;
+            margin: 10px;
+            animation: move 30s ease infinite;
+        }
+        @keyframes move {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            5% {
+                transform: translateX(0);
+            }10% {
+                transform: translateX(0);
+            }15% {
+                transform: translateX(0);
+            }20% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-420px);
+            }30% {
+                transform: translateX(-420px);
+            }35% {
+                transform: translateX(-420px);
+            }40% {
+                transform: translateX(-420px);
+            }
+            45% {
+                transform: translateX(-840px);
+            }50% {
+                transform: translateX(-840px);
+            }55% {
+                transform: translateX(-840px);
+            }60% {
+                transform: translateX(-840px);
+            }65% {
+                transform: translateX(-840px);
+            }70% {
+                transform: translateX(-840px);
+            }
+            75% {
+                transform: translateX(-1270px);
+            }80% {
+                transform: translateX(-1270px);
+            }85% {
+                transform: translateX(-1270px);
+            }90% {
+                transform: translateX(-1270px);
+            }95% {
+                transform: translateX(-1270px);
+            }
+        }
+        /* .container  img {
+            width: 200px;
+            height: 200px;
+            filter: invert(50%) sepia(95%) saturate(386%) hue-rotate(128deg) brightness(99%) contrast(84%);
+        } */
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- <div class="container">
+    <img src="images/user.png" alt="calender">
+</div> -->
+
+
+<div class="oter_animation">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+<script>
+
+function reveal() {
+    let section = document.querySelectorAll("section");
+
+    for(var i = 0; i < section.length; i++) {
+        let windowHeight = window.innerHeight;
+        let revealTop = section[i].getBoundingClientRect().top;
+        let revealPoint = 150;
+
+
+        if(revealTop < windowHeight - revealPoint) {
+            section[i].querySelector("h1").classList.add("active")
+        }
+    }
+}
+
+
+function changeHex(hex) {
+    hex = hex.replace("#", "");
+
+    let r = parseInt(hex.substring(0, 2), 16);
+    let g = parseInt(hex.substring(2, 4), 16);
+    let b = parseInt(hex.substring(4, 6), 16);
+
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+
+console.log(changeHex("#20b2aa"))
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url("index.css");
+        @import url("all-courses.css");
+
+        /* .our_blog {
+            transform: translateY(0);
+            opacity: 1;
+        } */
+
+        .each_blog_flex_container .each_blog_container {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .blog_section_section {
+            position: relative;
+            top: 400px;
+        }
+
+        .each_blog_flex_container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .each_blog_flex_container .each_blog_container {
+            width: 500px;
+            transform: rotateY(-90deg);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+
+        .each_blog_flex_container .each_blog_container.active {
+            transform: rotateY(0);
+            opacity: 1;
+        }
+
+        .each_blog_flex_container .each_blog_container > img {
+            width: 500px;
+            transition: all 1s ease;
+        }
+
+        .each_blog_flex_container .each_blog_container > img:hover {
+            transform: scale(1.1);
+        }
+
+        .each_blog_flex_container .each_blog_container .each_blog_other_container {
+            width: 500px;
+        }
+
+        .numbering {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 100px;
+        }
+
+        .news_letter_section {
+            margin: 0;
+            position: relative;
+        }
+
+        @media screen and (max-width: 1040px) {
+            .each_blog_flex_container .each_blog_container {
+                width: 400px;
+            }
+
+            .each_blog_flex_container .each_blog_container > img {
+                width: 400px;
+            }
+
+            .each_blog_flex_container .each_blog_container .each_blog_other_container {
+                width: 400px;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .each_blog_flex_container {
+                grid-gap: 20px;
+            }
+
+            .each_blog_flex_container .each_blog_container {
+                width: 350px;
+            }
+
+            .each_blog_flex_container .each_blog_container > img {
+                width: 350px;
+            }
+
+            .each_blog_flex_container .each_blog_container .each_blog_other_container {
+                width: 350px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .each_blog_flex_container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .each_blog_flex_container .each_blog_container {
+                width: 100%;
+            }
+
+            .each_blog_flex_container .each_blog_container > img {
+                width: 100%;
+            }
+
+            .each_blog_flex_container .each_blog_container .each_blog_other_container {
+                width: 100%;
+            }
+            
+        }
+    </style>
+    <link rel="shortcut icon" href="images/citilink logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+</head>
+<body>
+    
+
+
+    <div class="background">
+
+        <div class="first_container">
+
+            <div class="first_child_container">
+
+                <div class="logodiv">
+                    <a href="/"><img src="images/citilink logo.png" alt="logo" class="logo_image"></a>
+                </div>
+
+                <div class="contactdiv">
+
+                    <div class="time">
+                        <img src="images/clock.png" alt="clock">
+
+                        <div class="limit">
+                        <span>Monday - Friday</span>
+                        <span>8:00AM - 8:00PM</span>
+                        </div>
+                    </div>
+
+                    <div class="contacting">
+                            <img src="images/phone.png" alt="phone">
+
+                            <div class="limit_phone">
+                            <span>Call Us </span>
+                            <span>+2 392 392929 210</span>
+                            </div>
+                    </div>
+
+                </div>
+
+                <div class="socialmedia">
+                    <div><a href="/"><img src="images/facebook.png" alt="facebook"></a></div>
+
+                    <div><a href="/"><img src="images/twitter.png" alt="twitter"></a></div>
+
+                    <div><a href="/"><img src="images/instagram.png" alt="instagram"></a></div>
+
+                    <div><a href="/"><img src="images/pinterest-logo.png" alt="globe"></a></div>
+                             
+                    
+                </div>
+            </div>
+
+
+
+
+            <div class="second_child_container">
+
+
+                    <div class="listcontainer">
+                        <ul>
+                            <li><a href="/" id="home">Home</a></li>
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="journal.html">Journal</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="/" class="certify"><div class="certificate">
+                        <span>Get Certificate</span>
+                    </div></a>
+
+                    <div class="menu_div">
+                        <span>&#x2630;</span>
+                        <span>Menu</span>
+                    </div>
+
+            </div>
+
+
+
+
+<div class="middle_css">
+    <div class="link_anch">
+
+        <div class="home">
+            <a href="/"><span>Home &#10095;</span></a>
+        </div>
+
+        <div class="courses">
+            <span>blog</span>
+            <span>&#10095;</span>
+        </div>
+    </div>
+
+    <div class="heading_anchor">
+        <h1>blog posts</h1>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="blog_section_section">
+    <div class="main_blog_section">
+
+        <div class="our_blog">
+        <h3>OUR BLOG</h3>
+        <h1>Recent From Blog</h1>
+        </div>
+
+
+        <div class="each_blog_flex_container">
+
+
+            <div class="each_blog_container">
+                <img src="images/cute frelancer.jpg" alt="cute frelancer">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="each_blog_container">
+                <img src="images/javier-trueba-iQPr1XkF5F0-unsplash.jpg" alt="javier trueba">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="each_blog_container">
+                <img src="images/mimi-thian-vdXMSiX-n6M-unsplash.jpg" alt="">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="each_blog_container">
+                <img src="images/pexels-buro-millennial-1438072.jpg" alt="pexels buro">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="each_blog_container">
+                <img src="images/cute frelancer.jpg" alt="cute frelancer">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="each_blog_container">
+                <img src="images/javier-trueba-iQPr1XkF5F0-unsplash.jpg" alt="javier trueba">
+
+                <div class="each_blog_other_container">
+                    <div class="partofImage">
+                        
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+
+                        <div class="admin">
+                            <img src="images/speech-bubble.png" alt="comment">
+                            <span><span id="comment">3</span> COMMENTS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="other_content">
+                        <h1><a href="#">Build your Dream Software & Engineering Career</a></h1>
+
+                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<div class="numbering">
+    <button>&#10094;</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>&#10095;</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="news_letter_section">
+
+
+    <div class="news_letter_description">
+        <h1>Newsletter - Stay tune and get the latest update</h1>
+        <p>Far far away, behind the word mountains</p>
+    </div>
+    
+    
+    <div class="news_letter_input">
+        <input type="text" placeholder="Email Address">
+        <button><img src="images/send (1).png" alt="send"></button>
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="closing_element_div">
+    
+    
+        <!--Description-->
+    <div class="description_logo_ending increase_width">
+        <a><img src="images/citilink logo.png" alt="" class="logo_image"></a>
+    
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    
+        <div class="closing_social_media">
+            <div><a href="/"><img src="images/facebook.png" alt=""></a></div>
+    
+            <div><a href="/"><img src="images/instagram.png" alt=""></a></div>
+    
+            <div><a href="/"><img src="images/twitter.png" alt=""></a></div>       
+            
+        </div>
+    </div>
+    
+    <!--explore-->
+    <div class="explore_ending_part increase_width">
+        <h1>Explore</h1>
+    
+        <ul class="go_margin_up">
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Courses</a></li>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    
+    <!--Quick links-->
+    <div class="quick_links_part increase_width">
+    <h1>Quick Links</h1>
+    
+    <ul class="go_margin_up">
+        <li><a href="/">Contact Us</a></li>
+        <li><a href="/">Pricing</a></li>
+        <li><a href="/">Terms & Conditions</a></li>
+        <li><a href="/">Privacy</a></li>
+        <li><a href="/">Feedback</a></li>
+    </ul>
+    
+    </div>
+    
+    
+    <!--Recent posts-->
+    <div class="recent_post_part increase_width">
+    
+        <h1>Recent Posts</h1>
+    
+        <div class="recent_flexing">
+    
+            <div class="block_1">
+                
+                <img src="images/uptodate shareasale.jpg" alt="uptodate shareasale">
+    
+                <div class="recent_contents">
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+    
+            <div class="block_1">
+                <img src="images/uptodate shareasale.jpg" alt="update shareasale">
+    
+                <div class="recent_contents">
+    
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+    
+            <div class="block_1">
+                <img src="images/uptodate shareasale.jpg" alt="uptodate shareasale">
+    
+                <div class="recent_contents">
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+    <!--Have a question?-->
+    <div class="have_a_question_part increase_width">
+    
+    <h1>Have a Question?</h1>
+    
+    <div class="recent_flexing">
+    
+        <div class="question_block">
+            <img src="images/location.png" alt="address">
+    
+            <div class="recent_contents">
+                <p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
+            </div>
+        </div>
+    
+    
+        <div class="question_block">
+            <img src="images/phone.png" alt="phone">
+    
+            <div class="recent_contents">
+                <p>+2 392 3929 210</p>
+            </div>
+        </div>
+    
+    
+        <div class="question_block">
+            <img src="images/send.png" alt="email">
+    
+            <div class="recent_contents">
+                <p>info@yourdomain.com</p>
+            </div>
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    <div class="copyright">
+        <p>Copyright ©2023 All rights reserved | This template is made with &#x2764;  by <a href="https://www.uptodateacademy.com" target="_blank">Uptodateacademy</a>.</p>
+    </div>
+
+
+<script type="module">
+
+
+
+import { openList, reveal, reveal2 } from "./all.js";
+
+const listContainer = document.querySelector(".listcontainer");
+const ul = listContainer.querySelector("ul")
+
+document.querySelector(".menu_div").addEventListener("click", () => {
+    openList(ul)
+})
+
+
+
+let eachBlogcontainer = document.querySelectorAll(".each_blog_container");
+let ourBlog = document.querySelector(".our_blog")
+
+window.addEventListener("scroll", () => {
+    reveal2(eachBlogcontainer, window.innerHeight, 150);
+    reveal(ourBlog, window.innerHeight, 150)
+})
+
+
+</script>
+
+
+
+</body>
+</html>

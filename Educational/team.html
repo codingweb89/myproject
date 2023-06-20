@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="all-courses.css">
+
+    <style>
+        .one_course {
+            transform: rotateY(0) translateY(100px);
+            opacity: 0;
+            padding: 0;
+            width: 300px;
+            position: relative;
+        }
+
+        .one_course.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .one_course img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+            filter: none;
+        }
+
+        .one_course figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            transition: all 1s ease;
+        }
+
+        .one_course figure > figcaption {
+            padding: 0 5px;
+        }
+
+        .one_course figure > figcaption > p {
+            text-transform: uppercase;
+            margin: 20px 0;
+            color: grey;
+            transition: color 0.5s ease;
+        }
+
+        .one_course figure > figcaption > h1 {
+            text-transform: capitalize;
+            color: #000;
+            transition: color 0.5s ease;
+        }
+
+        .one_course:hover .social_media {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .one_course:hover figure {
+            background: #20b2aa;
+            color: #fff;
+        }
+
+        .one_course:hover figure > figcaption > h1, p {
+            color: #fff;
+        }
+
+        .one_course:hover figure > figcaption > p {
+            color: #fff;
+        }
+
+        .social_media {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: absolute;
+            top: 25%;
+            margin: 0 10px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .img_contain {
+            background: #000;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        .img_contain:hover {
+            background: #20b2aa;
+        }
+
+        .img_contain a {
+            padding: 0;
+            margin: 0;
+        }
+
+        .img_contain img {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            filter: invert(100%);
+        }
+
+        .second_section {
+            /* opacity: 1; */
+            /* margin-top: 100px; */
+            position: relative;
+            top: 450px;
+            /* margin-top: 200px; */
+        }
+
+        /* .second_section.active {
+            transform: ;
+        } */
+    </style>
+
+    <link rel="shortcut icon" href="images/citilink logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+</head>
+<body>
+    
+
+
+
+    <div class="background">
+
+        <div class="first_container">
+
+            <div class="first_child_container">
+
+                <div class="logodiv">
+                    <a href="/"><img src="images/citilink logo.png" alt="logo" class="logo_image"></a>
+                </div>
+
+                <div class="contactdiv">
+
+                    <div class="time">
+                        <img src="images/clock.png" alt="clock">
+
+                        <div class="limit">
+                        <span>Monday - Friday</span>
+                        <span>8:00AM - 8:00PM</span>
+                        </div>
+                    </div>
+
+                    <div class="contacting">
+                            <img src="images/phone.png" alt="phone">
+
+                            <div class="limit_phone">
+                            <span>Call Us </span>
+                            <span>+2 392 392929 210</span>
+                            </div>
+                    </div>
+
+                </div>
+
+                <div class="socialmedia">
+                    <div><a href="/"><img src="images/facebook.png" alt="facebook"></a></div>
+
+                    <div><a href="/"><img src="images/twitter.png" alt="twitter"></a></div>
+
+                    <div><a href="/"><img src="images/instagram.png" alt="instagram"></a></div>
+
+                    <div><a href="/"><img src="images/pinterest-logo.png" alt="globe"></a></div>
+                             
+                    
+                </div>
+            </div>
+
+
+
+
+            <div class="second_child_container">
+
+
+                    <div class="listcontainer">
+                        <ul>
+                            <li><a href="/" id="home">Home</a></li>
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="journal.html">Journal</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="/" class="certify"><div class="certificate">
+                        <span>Get Certificate</span>
+                    </div></a>
+
+                    <div class="menu_div">
+                        <span>&#x2630;</span>
+                        <span>Menu</span>
+                    </div>
+
+            </div>
+
+
+
+
+<div class="middle_css">
+    <div class="link_anch">
+
+        <div class="home">
+            <a href="/"><span>Home &#10095;</span></a>
+        </div>
+
+        <div class="courses">
+            <span>team</span>
+            <span>&#10095;</span>
+        </div>
+    </div>
+
+    <div class="heading_anchor">
+        <h1>team</h1>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="not_first_section">
+
+
+    <div class="courses_container">
+    
+    <div class="one_course">
+
+        <figure>
+            <img src="images/gregory-hayes-h5cd51KXmRQ-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+    
+    
+    
+    <div class="one_course">
+
+        <figure>
+            <img src="images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+    
+    
+    
+    <div class="one_course">
+
+        <figure>
+            <img src="images/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+    
+    
+    
+    <div class="one_course">
+
+        <figure>
+            <img src="images/clay-elliot-mpDV4xaFP8c-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+    
+    
+    
+    <div class="one_course">
+
+        <figure>
+            <img src="images/gregory-hayes-h5cd51KXmRQ-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="one_course">
+
+        <figure>
+            <img src="images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="one_course">
+
+        <figure>
+            <img src="images/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="one_course">
+
+        <figure>
+            <img src="images/clay-elliot-mpDV4xaFP8c-unsplash.jpg" alt="user">
+
+            <figcaption>
+                <h1>Ph.D. Adrian Molises</h1>
+                <p>Developer and lead instructor</p>
+            </figcaption>
+        </figure>
+
+
+        <div class="social_media">
+
+            <div class="img_contain"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+
+            <div class="img_contain"><a href="#"><img src="images/pinterest-logo.png" alt="pinterest"></a></div>
+
+        </div>
+
+
+    </div>
+    
+    
+    </div>
+
+
+    </section>
+
+
+
+
+    <section class="second_section">
+        <div class="background_change">
+            
+            <div class="four_divs">
+                <img src="images/graduated.png" alt="graduated">
+        
+                <div class="counts">
+                    <span id="success">3,000</span><br>
+                    <span>SUCCESS STORIES</span>
+                </div>
+            </div>
+        
+        
+            <div class="four_divs">
+                <img src="images/scientist.png" alt="scientist2">
+        
+                <div class="counts">
+                    <span id="authors">320</span><br>
+                    <span>TRUSTED AUTHORS</span>
+                </div>
+            </div>
+        
+        
+            <div class="four_divs">
+                <img src="images/calendar.png" alt="calender">
+        
+                <div class="counts">
+                    <span id="schedules">1,000</span><br>
+                    <span>SCHEDULES</span>
+                </div>
+            </div>
+        
+        
+            <div class="four_divs">
+                <img src="images/knowledge.png" alt="calender">
+        
+                <div class="counts">
+                    <span id="courses">587</span><br>
+                    <span>COURSES</span>
+                </div>
+            </div>
+        
+        
+        
+        
+        </div>
+        </section>
+
+
+
+        
+<div class="news_letter_section">
+
+
+    <div class="news_letter_description">
+        <h1>Newsletter - Stay tune and get the latest update</h1>
+        <p>Far far away, behind the word mountains</p>
+    </div>
+    
+    
+    <div class="news_letter_input">
+        <input type="text" placeholder="Email Address">
+        <button><img src="images/send (1).png" alt="send"></button>
+    </div>
+    
+    </div>
+
+
+
+    <div class="closing_element_div">
+
+
+        <!--Description-->
+    <div class="description_logo_ending increase_width">
+        <a><img src="images/citilink logo.png" alt="" class="logo_image"></a>
+    
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    
+        <div class="closing_social_media">
+            <div><a href="/"><img src="images/facebook.png" alt=""></a></div>
+    
+            <div><a href="/"><img src="images/instagram.png" alt=""></a></div>
+    
+            <div><a href="/"><img src="images/twitter.png" alt=""></a></div>       
+            
+        </div>
+    </div>
+    
+    <!--explore-->
+    <div class="explore_ending_part increase_width">
+        <h1>Explore</h1>
+    
+        <ul class="go_margin_up">
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Courses</a></li>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    
+    <!--Quick links-->
+    <div class="quick_links_part increase_width">
+    <h1>Quick Links</h1>
+    
+    <ul class="go_margin_up">
+        <li><a href="/">Contact Us</a></li>
+        <li><a href="/">Pricing</a></li>
+        <li><a href="/">Terms & Conditions</a></li>
+        <li><a href="/">Privacy</a></li>
+        <li><a href="/">Feedback</a></li>
+    </ul>
+    
+    </div>
+    
+    
+    <!--Recent posts-->
+    <div class="recent_post_part increase_width">
+    
+        <h1>Recent Posts</h1>
+    
+        <div class="recent_flexing">
+    
+            <div class="block_1">
+                
+                <img src="images/uptodate shareasale.jpg" alt="uptodate shareasale">
+    
+                <div class="recent_contents">
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+    
+            <div class="block_1">
+                <img src="images/uptodate shareasale.jpg" alt="update shareasale">
+    
+                <div class="recent_contents">
+    
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+    
+            <div class="block_1">
+                <img src="images/uptodate shareasale.jpg" alt="uptodate shareasale">
+    
+                <div class="recent_contents">
+    
+                    <div class="post_description">
+    
+                        <div class="admin">
+                            <img src="images/calendar (1).png" alt="calender">
+                            <span>JAN. 18, 2021</span>
+                        </div>
+    
+                        <div class="admin">
+                            <img src="images/user.png" alt="user">
+                            <span>Admin</span>
+                        </div>
+    
+                    </div>
+    
+    
+                    <p><a href="#">Creativity and Inspiration</a></p>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+    <!--Have a question?-->
+    <div class="have_a_question_part increase_width">
+    
+    <h1>Have a Question?</h1>
+    
+    <div class="recent_flexing">
+    
+        <div class="question_block">
+            <img src="images/location.png" alt="address">
+    
+            <div class="recent_contents">
+                <p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
+            </div>
+        </div>
+    
+    
+        <div class="question_block">
+            <img src="images/phone.png" alt="phone">
+    
+            <div class="recent_contents">
+                <p>+2 392 3929 210</p>
+            </div>
+        </div>
+    
+    
+        <div class="question_block">
+            <img src="images/send.png" alt="email">
+    
+            <div class="recent_contents">
+                <p>info@yourdomain.com</p>
+            </div>
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    <div class="copyright">
+        <p>Copyright ©2023 All rights reserved | This template is made with &#x2764;  by <a href="https://www.uptodateacademy.com" target="_blank">Uptodateacademy</a>.</p>
+    </div>
+
+
+    <script type="module">
+
+
+
+import { openList, reveal, reveal2 } from "./all.js";
+
+const listContainer = document.querySelector(".listcontainer");
+const ul = listContainer.querySelector("ul")
+
+document.querySelector(".menu_div").addEventListener("click", () => {
+    openList(ul)
+})
+
+let oneCourse = document.querySelectorAll(".one_course")
+let secondSection = document.querySelector(".second_section")
+
+
+window.addEventListener("scroll", () => {
+    reveal2(oneCourse, window.innerHeight, 150);
+    reveal(secondSection, window.innerHeight, 150);
+})
+
+
+        // function reveal(element, height,  revealPoint) {
+        //     element.forEach(each => {
+        //         let eachHeight = each.getBoundingClientRect().top;
+        //         if(eachHeight < (height - revealPoint)) {
+        //             each.classList.add("active")
+        //         }
+        //     })
+        // }
+
+        // function reveal2(element, height, revealPoint) {
+        //     let elemHeight = element.getBoundingClientRect().top;
+        //     if(elemHeight < (height - revealPoint)) {
+        //         element.classList.add("active")
+        //     }
+        // }
+
+        // let oneCourse = document.querySelectorAll(".one_course")
+        // let secondSection = document.querySelector(".second_section")
+
+        // window.addEventListener("scroll", () => {
+        //     reveal(oneCourse, window.innerHeight, 150);
+        //     reveal2(secondSection, window.innerHeight, 150)
+        // });
+
+    </script>
+
+
+
+</body>
+</html>
