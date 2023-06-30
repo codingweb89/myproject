@@ -1,4 +1,4 @@
-import { openNavigation, closeNavigation, toggleNavigation } from "./all.js";
+import { openNavigation, closeNavigation, toggleNavigation, setCookie, getCookie, deleteCookie } from "./all.js";
 
 const menulistDiv = document.querySelector(".menu_list_div");
 const openNavigationDiv = document.querySelector(".open_navigations_div");
@@ -52,4 +52,94 @@ function clickFeatures() {
     })
 }
 
-clickFeatures()
+clickFeatures();
+
+
+function addElementTimeout(element, classes) {
+    setTimeout(function() {
+        element.classList.add(classes)
+    }, 5000)
+}
+
+function addElement5Secs(element, classes) {
+    setTimeout(function() {
+        element.classList.add(classes)
+    }, 2000)
+}
+
+const cookieBannerDiv = document.querySelector(".cookie_banner_div")
+
+const messageAiOption = document.querySelector(".message_ai_option");
+
+window.addEventListener("load", (e) => {
+    let getcookie = getCookie("userCookie");
+    if(getcookie === "denied" || getcookie === undefined || getcookie === "") {
+        addElementTimeout(cookieBannerDiv, "display_cookie");
+    }
+    addElement5Secs(messageAiOption, "open_chat_options")
+})
+
+const chatBody = document.querySelector(".chat_body")
+const exitChat = document.getElementById("exit_chat");
+exitChat.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeNavigation(chatBody, "open_chat")
+})
+
+
+
+const chatAi = document.getElementById("chatai");
+chatAi.addEventListener("click", (e) => {
+    e.preventDefault();
+    openNavigation(chatBody, "open_chat")
+})
+
+const exitIcon = document.getElementById("exitIcon");
+exitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    let parent1 = e.target.parentElement;
+    let parent2 = parent1.parentElement;
+    parent2.remove()
+})
+
+
+const reject = document.getElementById("reject");
+reject.addEventListener("click", (e) => {
+    let p1 = e.target.parentElement;
+    let p2 = p1.parentElement;
+    let p3 = p2.parentElement;
+    setCookie("userCookie", "denied", 365)
+    p3.remove()
+})
+
+const accept = document.getElementById("accept");
+accept.addEventListener("click", (e) => {
+    e.preventDefault();
+    let p1 = e.target.parentElement;
+    let p2 = p1.parentElement;
+    let p3 = p2.parentElement;
+    setCookie("userCookie", "granted", 365)
+    p3.remove()
+})
+
+const chatPageEmail = document.getElementById("chatpageemail");
+
+const chatbotSignup = document.getElementById("chatbotsignup")
+
+function accessFunction() {
+    if(chatPageEmail.value.trim() !== "") {
+        if(chatPageEmail.value.indexOf("@") != -1) {
+            setCookie("EmailAddress", chatPageEmail.value, 365);
+            window.location.href="signup.html";
+        }return
+    }return
+}
+
+chatbotSignup.onclick = accessFunction;
+
+
+
+
+
+
+

@@ -43,10 +43,10 @@
                 <div class="second_heading2_or_something"><p>All all in-one platform to build and launch conversational chatbot without coding.</p></div>
                 <div class="first_email_input_div">
                     <div class="input_divs">
-                        <input type="email" name="email_input" id="email_input" placeholder="Enter your business email">
+                        <input type="email" name="email_input" id="chatpageemail" placeholder="Enter your business email" required>
                     </div>
 
-                    <div class="search_input_divs"><button>Sign up free</button></div>
+                    <div class="search_input_divs"><button id="chatbotsignup">Sign up free</button></div>
                 </div>
 
                 <div class="trial_divs">
@@ -171,15 +171,89 @@
 
         <div class="login_sign_up">
             <div class="log_in_div">
-                <button id="login">Login</button>
+                <button id="login" onclick="window.location.href=`login.html`">Login</button>
             </div>
 
             <div class="sign_up_div">
-                <button id="signup">Sign up</button>
+                <button id="signup" onclick="window.location.href='signup.html'">Sign up</button>
             </div>
         </div>
 
 
+    </div>
+</div>
+
+
+
+<div class="ai_chat_options">
+    <div class="message_ai_option">
+        <div class="exit_icon_ai">
+            <span id="exitIcon">&#10005;</span>
+        </div>
+
+        <div class="text_ai_message">
+            <p>🙌 Welcome back! How may I help you today?. 🤖</p>
+        </div>
+    </div>
+    <div class="ai_chat_icon">
+        <div class="chat_icon_div_container">
+            <img id="chatai" src="images/chatbot (1).png" alt="caht ai">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="cookie_banner_div">
+    <div class="cookie_banner_content">
+        <p>This website uses cookies to enhance your browsing experience and provide personalized services. By using our website, you consent to the use of cookies as described in our Cookie policy.</p>
+
+        <div><br></div>
+
+        <div class="cookie_banner_buttons">
+            <button id="accept">Accept</button>
+            <button id="reject">Reject</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="chat_body">
+    <div class="main_chat_content">
+        <div class="chat_title_heading">
+            <div class="img_title">
+                <div class="img_src">
+                    <img src="images/chatbot.png" alt="chatbot">
+                </div>
+                <div class="title_content">
+                    <h2>ChatBot</h2>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <div class="exit_chat_body">
+                <span id="exit_chat">&#10006;</span>
+            </div>
+        </div>
+
+        <div class="real_chat_content">
+            <div class="ai_chat"></div>
+            <div class="user_chat"></div>
+        </div>
+
+        <div class="closure_div_chat">
+            <div class="first_closure_div">
+                <div contenteditable="true"></div>
+                <div class="send_img">
+                    <img src="images/send.png" alt="sendmessage">
+                </div>
+            </div>
+            <div class="footer_chat">
+                <p>Powered by <a href="javascript:void(0)">ChatBot</a></p>
+            </div>
+        </div>
     </div>
 </div>
 

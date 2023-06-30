@@ -1,0 +1,111 @@
+@import url("all.css");
+@import url("signup.css");
+
+/* .sign_up_container {
+    border-radius: 0;
+} */
+
+.signup_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_up_full_container {
+    flex-direction: row-reverse;
+    border-radius: 0;
+    padding: 0;
+    background: #f2f2f2;
+}
+
+.quotation_section img {
+    width: 10px;
+    filter: invert(100%);
+}
+
+.last_quotation {
+    transform: rotate(180deg);
+}
+
+.header_zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header_img_zone > img {
+    width: 50px;
+}
+
+.full_login_form > form > div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px 0;
+}
+
+.full_login_form > form input {
+    padding: 10px;
+    background: var(--white-color);
+    border: 1px solid grey;
+}
+
+.full_login_form > form input[type=submit] {
+    border: none;
+    background: lightblue;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.first_checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: str;
+    gap: 5px;
+}
+
+.dont_have_account {
+    margin-top: 50px;
+}
+
+
+.comment_section {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    background: lightblue;
+    padding: 0 30px;
+}
+
+.quoter_name {
+    text-align: right;
+    position: relative;
+    top: 50px;
+    color: var(--white-color);
+}
+
+.quotation_section {
+    color: var(--white-color);
+    line-height: 25px;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    body {
+        height: 100vh;
+    }
+    .comment_section {
+        display: none;
+    }
+
+    .sign_up_full_container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sign_up_full_container {
+        border-radius: 10px;
+    }
+}
