@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --background: lawngreen;
+    --transparent-blue: rgba(255, 255, 255, .4);
+}
+
+body {
+    position: relative;
+}
+
+.page_container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/davide-cantelli-r0q06hjTgOc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navigation_bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: var(--transparent-blue);
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.navigation_bar > nav {
+    width: 100%;
+    display: table;
+    padding: 25px;
+}
+
+.navigation_bar > nav > ul {
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.navigation_bar > nav > ul > li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navigation_bar > nav > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+.navigation_bar .fa {
+    margin-right: 8px;
+}
+
+.service_child {
+    display: none;
+}
+
+#services:hover .service_child {
+    display: block;
+    position: absolute;
+    background: var(--transparent-blue);
+    margin-top: 10px;
+}
+
+#services:hover .service_child ul {
+    display: block;
+    text-align: left;
+    margin: 10px;
+    list-style: none;
+}
+
+#services:hover .service_child ul li {
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    padding: 10px;
+    width: 150px;
+}
+
+#services:hover .service_child ul li:last-child {
+    border: none;
+}
+
+#services:hover .service_child ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-align: left;
+    /* padding: 30px 10px; */
+}
+
+.service_child_2 {
+    display: none;
+}
+
+#marketing:hover .service_child_2 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: var(--transparent-blue);
+    margin-left: 140px;
+    margin-top: -40px;
+}
+
+.fa-angle-right {
+    float: right;
+}
+
+.service_child_3 {
+    display: none;
+}
+
+#mobileapp:hover .service_child_3 {
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: var(--transparent-blue);
+}
+
+.unknown_first {
+    display: none;
+}
+
+#aboutus:hover .unknown_first {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .4);
+}
+
+#aboutus:hover .unknown_first ul {
+    list-style: none;
+    margin: 10px;
+}
+
+#aboutus:hover .unknown_first ul li {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    width: 150px;
+}
+
+#aboutus:hover .unknown_first ul li:last-child {
+    border: none;
+}
+
+#aboutus:hover .unknown_first ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.body_content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-30%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first_container {
+    margin: 0 30px;
+    max-width: 500px;
+}
+
+.first_container > .h1_fa {
+    font-size: 25px;
+    color: #fff;
+}
+
+.contents_fa_fa > div > h1 {
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+.contents_fa_fa > div > h3 {
+    font-size: 30px;
+}
+
+.contents_fa_fa > div > h1, h3 {
+    color: #fff;
+}
+
+.contents_fa_fa > div > p {
+    color: var(--transparent-blue);
+    line-height: 25px;
+}
+
+.social_1_fa {
+    display: inline-flex;
+}
+
+.social_1_fa > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.second_container {
+    margin: 0 30px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 0 10px 5px  rgba(0, 0, 0, .3)
+}
+
+.form_container {
+    margin-top: 50px;
+}
+
+.form_container > h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.form_container > form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+
+.form_container > form input[type=checkbox] {
+    width: fit-content;
+}
+
+.form_container > form input[type=email], .form_container > form input[type=password] {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+.form_container > form input[type=email]::placeholder, .form_container > form input[type=password]::placeholder {
+    color: #fff;
+}
+
+.form_container .fa {
+    float: right;
+}
+
+.other_fa_pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.other_fa_pass a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form_container > form input[type=submit] {
+    background: aqua;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.dont_have_fa {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.dont_have_fa a {
+    color: aqua;
+    text-decoration: none;
+}
+
+#for_navigation:checked + .navigation_bar {
+    height: auto;
+}
+
+.all_hidden_navigations {
+    display: none;
+    position: relative;
+}
+
+.inner_navigations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.logo_navigation > h1 {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1260px) {
+    .all_hidden_navigations {
+        display: block;
+    }
+
+    .toggle_navigation > label {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .navigation_bar > nav > ul {
+        text-align: left;
+    }
+
+    .navigation_bar > nav > ul > li {
+        display: block;
+        margin: 20px 0;
+        border-bottom: 1px solid var(--transparent-blue);
+    }
+
+    .navigation_bar > nav > ul > li:last-child {
+        border: none;
+    }
+
+    .navigation_bar {
+        height: 60px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .logo_navigation {
+        display: block;
+    }
+
+    #services:hover .service_child {
+        display: none;
+    }
+
+    #aboutus:hover .unknown_first {
+        display: none;
+    }
+
+    .body_content {
+        transform: translateY(-50%);
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .second_container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .first_container {
+        max-width: 100%;
+    }
+}
