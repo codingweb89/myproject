@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/font-awesome.css">
+    <link rel="stylesheet" href="notepad_create.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+
+
+<div class="full_container">
+    <div class="intial_heading"><h2><span id="h2"></span>-Notepad</h2></div>
+    <div class="settings_container">
+        <ul>
+            <li id="file"><a href="javascript:void(0)"><span>File</span><i class="fa fa-caret-down"></i></a>           
+                <div class="extra_child" id="fileDiv">
+                    <ul>
+                        <li><a href="javascript:void(0)">New</a></li>
+                        <li><a href="javascript:void(0)">File</a></li>
+                        <li><a href="javascript:void(0)">Save</a></li>
+                        <li id="saveAs"><a href="javascript:void(0)">Save As</a></li>
+                        <li><a href="javascript:void(0)">Download</a></li>
+                        <li><a href="javascript:void(0)">Exit</a></li>
+                    </ul>
+                </div>           
+            </li>
+
+            <li id="edit"><a href="javascript:void(0)"><span>Edit</span><i class="fa fa-caret-down"></i></a>           
+                <div class="extra_child" id="EditDiv">
+                    <ul>
+                        <li><a href="javascript:void(0)">Undo</a></li>
+                        <li><a href="javascript:void(0)">Cut</a></li>
+                        <li><a href="javascript:void(0)">Copy</a></li>
+                        <li><a href="javascript:void(0)">Paste</a></li>
+                        <li><a href="javascript:void(0)">Delete</a></li>
+                    </ul>
+                </div>           
+            </li>
+
+            <li id="insert"><a href="javascript:void(0)"><span>Insert</span><i class="fa fa-caret-down"></i></a>           
+                <div class="extra_child" id="insertDiv">
+                    <ul>
+                        <li><a href="javascript:void(0)">Font</a></li>
+                        <li><a href="javascript:void(0)">Replace</a></li>
+                        <li><a href="javascript:void(0)">Select All</a></li>
+                        <li><a href="javascript:void(0)">Date/Time</a></li>
+                        <li><i class="fa fa-check"></i><a href="javascript:void(0)"> Word Wrap</a></li>
+                    </ul>
+                </div>           
+            </li>
+
+            <li id="view"><a href="javascript:void(0)"><span>View</span><i class="fa fa-caret-down"></i></a>           
+                <div class="extra_child">
+                    <ul>
+                        <li id="zoom_li"><a href="javascript:void(0)">Zoom</a> <i class="fa fa-angle-right" id="zoom"></i>
+                            <div class="zoom_keys">
+                                <ul>
+                                    <li id="zoom_tips"><a href="javascript:void(0)">Zoom In</a> <span>Ctrl Plus</span></li>
+                                    <li id="zoom_tips"><a href="javascript:void(0)">Zoom Out</a> <span>Ctrl Minus</span></li>
+                                    <li id="zoom_tips"><a href="javascript:void(0)">Restore Default Zoom</a> <span>Ctrl 0</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>           
+            </li>
+
+            <li id="help"><a href="javascript:void(0)"><span>Help</span><i class="fa fa-caret-down"></i></a>           
+                <div class="extra_child">
+                    <ul>
+                        <li><a href="https://go.microsoft.com/fwlink/?LinkId=834783" target="_blank">View Help</a></li>
+                        <li><a href="javascript:void(0)">Send Feedback</a></li>
+                        <li id="about_notepad"><a href="javascript:void(0)">About</a></li>
+                    </ul>
+                </div>           
+            </li>
+        </ul>
+    </div>
+    <div class="tools_container">
+        <div><button><i class="fa fa-file-o tools_file" title="File"></i></button></div>
+        <div><button><i class="fa fa-search tools_search" title="Search"></i></button></div>
+        <div><button><i class="fa fa-floppy-o tools_save" title="Save"></i></button></div>
+        <div class="border_right"><i class="fa fa-print tools_print" title="Print"></i></div>
+        <div><button><i class="fa fa-bold tools_bold" title="Bold"></i></button></div>
+        <div><button><i class="fa fa-underline tools_underline" title="Underline"></i></button></div>
+        <div class="border_right"><button><i class="fa fa-italic tools_italic" title="Italic"></i></button></div>
+        <div class="border_right" id="inserting_image"><button><i class="fa fa-picture-o tools_image" title="InsertImage"></i></button>
+            <div class="insert_url">
+                <div><button><i class="fa fa-upload"></i> Upload by computer</button></div>
+                <div><button><i class="fa fa-link"></i> Insert by url</button></div>
+            </div>
+        </div>
+        <div><button><i class="fa fa-cut tools_cut" title="Cut"></i></button></div>
+        <div><i class="fa fa-copy tools_copy" title="Copy"></i></div>
+        <div class="border_right"><i class="fa fa-clipboard tools_clipboard_duplicate" title="Duplicate"></i></div>
+        <div><i class="fa fa-undo tools_undo" title="Undo"></i></div>
+        <div class="border_right"><i class="fa fa-repeat tools_redo" title="Redo"></i></div>
+        <div id="font_family" class="border_right"><div><span>Font Family</span> <i class="fa fa-caret-down"></i></div>
+                <div class="language_list family">
+                    <button>
+                    <ul>
+                        <li>Agency FB</li>
+                        <li>Arial</li>
+                        <li>AlexandrinusLS</li>
+                        <li>American Classic</li>
+                        <li>AnzeigenGroT</li>
+                        <li>Arial Rounded MT</li>
+                        <li>Arial Unicode MS</li>
+                        <li>Ashley Crawford</li>
+                        <li>Bahnschrift</li>
+                        <li>Baloo</li>
+                        <li>Baskerville Old Face</li>
+                    </button>
+                    </ul>
+                </div>
+            </div>
+            <div id="font_family" class="border_right"><div><span>Font Size</span> <i class="fa fa-caret-down"></i></div>
+                <div class="language_list size">
+                    <button>
+                    <ul>
+                        <li>2</li>                     
+                        <li>4</li>                     
+                        <li>8</li>                     
+                        <li>9</li>                     
+                        <li>10</li>                     
+                        <li>11</li>                     
+                        <li>14</li>                     
+                        <li>16</li>                     
+                        <li>20</li>                     
+                    </ul>
+                </button>
+                </div>
+            </div>
+            <div id="font_family"><div><span>Normal</span> <i class="fa fa-caret-down"></i></div>
+                <div class="language_list htmlblock">
+                    <button>
+                    <ul>
+                        <li>Major Heading</li>                     
+                        <li>Minor Heading</li>                     
+                        <li>Sub Heading</li>                     
+                        <li>Paragraph</li>                     
+                        <li>Normal</li>                                         
+                    </ul>
+                </button>
+                </div>
+            </div>
+    </div>
+    <div class="editing_body" contenteditable="true" contextmenu="Value is defined"></div>
+    <div class="ending_container">
+        <div>
+            <div><i class="fa fa-building-o"></i>Words: <span id="words">0</span></div>
+            <div><i class="fa fa-compress"></i>Length: <span id="length">0</span></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="add_title">
+    <div><h2>Title</h2></div>
+    <input type="text" id="title_input" value="Untitled">
+    <div class="buttons">
+        <button id="save">Ok</button>
+        <button id="cancel">Cancel</button>
+    </div>
+</div>
+
+<div class="preloader">
+    <i class="fa fa-refresh fa-2x"></i>
+</div>
+
+<div class="save_alert">
+    <p>Save Successfully</p><i class="fa fa-times"></i>
+</div>
+
+<div class="saveas">
+    <i class="fa fa-times exitsaveas"></i>
+    <h3>Save Document As</h3>
+    <div><br></div>
+    <div class="doctype">
+        <div><label>text/html</label><input type="radio" name="radio" id=""></div>
+        <div><label>text/css</label><input type="radio" name="radio" id=""></div>
+        <div><label>text/js</label><input type="radio" name="radio" id=""></div>
+        <div><label>text/txt</label><input type="radio" name="radio" id=""></div>
+        <div><label>text/doc</label><input type="radio" name="radio" id=""></div>
+    </div>
+    <div><br></div>
+    <div class="preview_type">
+        <h5>Preview</h5>
+        <div class="last_object">
+            <i class="fa fa-building-o"></i>
+            <span id="preview_title"></span><span id="preview_select"></span>
+        </div>
+    </div>
+    <button type="button" id="submitPreview">Submit</button>
+</div>
+
+<div class="font_body">
+    <div class="font_header"><span>Font</span><i class="fa fa-times closedisplay"></i></div>
+    <div class="font_content">
+        <div class="font_name">
+            <span>Font:</span>
+            <input type="text" id="select_input_font">
+            <select id="name_select" multiple>
+                <option>Agency FB</option>
+                <option>AlexandrinusLS</option>
+                <option>American Classic</option>
+                <option>AnzeigenGroT</option>
+                <option>Arial</option>
+                <option>Arial Rounded MT</option>
+                <option>Arial Unicode MS</option>
+                <option>Ashley Crawford</option>
+                <option>Bahnschrift</option>
+                <option>Baloo</option>
+                <option>Baskerville Old Face</option>
+                <option selected>Gill Sans</option>
+            </select>
+        </div>
+        <div class="font_style">
+            <span>Font Style</span>
+            <input type="text" id="select_input_style">
+            <select id="style_select" multiple>
+                <option selected>Regular</option>
+                <option><i>Oblique</i></option>
+                <option><b>Bold</b></option>
+                <option><b><i>Bold Oblique</i></b></option>
+            </select>
+        </div>
+        <div class="font_size">
+            <span>Font Size:</span>
+            <input type="text" id="select_input_size">
+            <select id="size_select" multiple>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option selected>12</option>
+                <option>14</option>
+                <option>16</option>
+                <option>20</option>
+                <option>22</option>
+                <option>24</option>
+                <option>26</option>
+                <option>28</option>
+                <option>36</option>
+                <option>48</option>
+                <option>72</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="font_establish">
+    <div class="sample_font">
+        <fieldset>
+            <legend>Sample</legend>
+            <div class="experiment_alpha">AaBbYyZz</div>
+        </fieldset>
+    </div>
+
+    <div class="script_font">
+        <div>Script:</div>
+        <select id="select_script">
+            <option>Western</option>
+        </select>
+    </div>
+
+    <div class="close_buttons">
+        <button id="ok_fonts" type="button">Ok</button>
+        <button id="cancel_fonts" type="button">Cancel</button>
+    </div>
+</div>
+
+</div>
+
+
+<div class="find_replace">
+    <div class="header"><span>Replace</span><i class="fa fa-times close_replace"></i></div>
+    <div class="parent_replace">
+        <input type="text" id="find_input" placeholder="Search" title="Input a valid input">
+        <input type="text" id="replace_input" placeholder="Replace" title="Input a valid input">
+    </div>
+    <div class="alert_result"><i class="fa fa-check"></i>Text Replaced</div>
+    <div class="result_div">Found in <span id="result_search"></span></div>
+    <div class="replace_button"><button type="button" id="replace_button">Replace</button></div>
+</div>
+
+
+<div class="search_bar_div">
+    <i class="fa fa-times exitSearchBarDiv" title="Exit"></i>
+    <div><span id="position_result">0</span>/<span id="total_result">0</span></div>
+    <div><br></div>
+    <div>
+        <input type="text" placeholder="Search">
+        <!-- <i class="fa fa-times" title="Clear"></i> -->
+    </div>
+</div>
+
+
+<div class="uploadfiles_div">
+    <div class="head"><h3>Upload File</h3><i class="fa fa-times exit_uploadfiles"></i></div>
+    <div><button type="button" id="choose_upload_file">Choose File</button></div>
+    <div class="error_uploading"></div>
+    <i class="fa fa-spinner fa-2x showase_spinner"></i>
+    <div class="showcase"></div>
+    <div class="upladfiles_button">
+        <button type="button" id="select_file">Select</button>
+        <button type="button" id="cancel_file">Cancel</button>
+    </div>
+</div>
+
+
+<div class="insert_image_url">
+    <div class="head"><h3>Insert image url</h3><i class="fa fa-times exit_insert_image"></i></div>
+    <div class="error_fetching"></div>
+    <div class="fetch_div_input"><span>Url</span><input type="text" id="fetch_input" autofocus autocomplete="off"></div>
+    <div class="fetch_result"></div>
+    <div class="fetch_buttons">
+        <button type="button" id="selectImage">Select</button>
+        <button type="button" id="cancelImage">Cancel</button>
+    </div>
+</div>
+
+
+<!-- <img src="images/albert-dera-ILip77SbmOE-unsplash.jpg" alt=""> -->
+
+
+<aside>
+    <div class="about_notepad_fa">
+        <div class="about_header"><span>About Notepad</span> <i class="fa fa-times close_about_notepad"></i></div>
+        <div class="container_logo_about"><img src="images/villey logo.png" alt="villey logo"></div>
+        <div class="about_notepad_info">
+            <div class="notepad_logo"><i class="fa fa-pied-piper-pp fa-3x"></i></div>
+            <div class="notepad_writings">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente officia esse ut ipsum necessitatibus eveniet?</p>
+                <div><br></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora tempore temporibus blanditiis nesciunt, commodi rerum quis sint inventore sunt?</p>
+            </div>
+        </div>
+        <div><br></div>
+        <div><br></div>
+        <div><br></div>
+        <div><button type="button" id="ok_notepad">OK</button></div>
+    </div>
+</aside>
+
+
+<section>    
+    <div class="thanks_div">
+        <div class="thanks_header"><i class="fa fa-times close_thanks_div" style="float: right;"></i> <h3>Say Thanks To</h3></div>
+        <div><br></div>
+        <div class="thanks_image"><img src="images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="user_img">
+            <div><br></div>
+            <button type="button">Albert Dera</button>
+        </div>
+        <div><br></div>
+        <div class="user_social_medias">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-globe"></i>
+        </div>
+    </div>
+</section>
+
+<input type="file" id="upload_files" hidden>
+
+<script src="notepad_create.js" defer></script>
+
+
+
+
+</body>
+</html>
