@@ -1,0 +1,81 @@
+@import url("all.css");
+@import url("signup.css");
+@import url("signup_page2.css");
+
+body {
+    height: auto;
+}
+
+.loading_hr {
+    width: 40%;
+    transition: width 1s linear;
+}
+
+.levels_container > div:nth-child(2) {
+    background-color: var(--blue-color);
+    transition: none;
+}
+
+/* .levels_container > div:nth-child(3) {
+    background-color: var(--blue-color);
+} */
+
+/* .div_form_element > form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+} */
+
+.payment_methods_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment_methods_div > div {
+    display: flex;
+    align-items: center;
+}
+
+#form1.class {
+    display: none;
+}
+
+
+.other_logins {
+    display: none;
+}
+
+.button_div2 {
+    text-align: center;
+    display: table;
+    width: 100%;
+    display: none;
+}
+
+.button_div2.class {
+    display: block;
+}
+
+.button_div2 > button {
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    background: var(--blue-color);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+}
+
+.debit {
+    width: fit-content;
+}
+
+.paypal {
+    width: fit-content;
+}

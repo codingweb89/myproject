@@ -1,0 +1,44 @@
+@import url("all.css");
+@import url("signup.css");
+
+
+.levels_container div:nth-child(2) {
+    transition: background-color 1s linear;
+}
+
+.loading_hr {
+    transition: width 1s linear;
+}
+
+.div_form_element > form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    place-content: center;
+}
+
+.button_div {
+    grid-column: span 2;
+}
+
+#rate_chatbot {
+    font-size: 14px;
+}
+
+#rate_chatbot::placeholder {
+    font-size: 13.3333px;
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .div_form_element > form {
+        display: block;
+    }
+
+    .div_form_element > form > div {
+        margin-bottom: 20px;
+    }
+}

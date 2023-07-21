@@ -418,7 +418,7 @@ body {
 
 .cookie_banner_div {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     /* top: 73%; */
     left: 0;
     background: linear-gradient(90deg, blue, purple);

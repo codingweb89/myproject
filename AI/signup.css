@@ -106,36 +106,12 @@ body::-webkit-scrollbar {
     gap: 5px;
 }
 
-.languages_lists {
-    float: right;
-    width: fit-content;
-    text-align: left;
-    z-index: 1;
-    position: relative;
-    display: none;
-}
-
-.languages_lists.open_languages {
-    display: block;
-}
-
-.languages_lists > div {
-    background: #f2f2f2;
-    margin: 5px auto;
-    padding: 5px;
-    cursor: pointer;
-}
-
 .language_text {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     cursor: pointer;
-}
-
-.language_text span:nth-child(2) {
-    transform: rotate(90deg);
 }
 
 .signup_heading_section {
@@ -160,6 +136,7 @@ body::-webkit-scrollbar {
 .hr_leveling > hr {
     height: 15px;
     border: 1px solid lightgrey;
+    border-radius: 10px;
 }
 
 .loading_hr {

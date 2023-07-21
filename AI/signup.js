@@ -2,7 +2,6 @@ import { toggleNavigation, setCookie, getCookie, deleteCookie } from "./all.js";
 
 
 const languageText = document.querySelector(".language_text");
-const languageList = document.querySelector(".languages_lists");
 
 languageText.addEventListener("click", (e) => {
     e.preventDefault();
@@ -39,9 +38,9 @@ function validateForm() {
         setCookie("userEmail", EmailInput.value, 365);
         setCookie("password", PasswordInput.value, 365)
 
-        // NameInput.value = ""; EmailInput.value = ""; PasswordInput.value = ""; ConfirmPasswordInput.value = ""; checkBoxInput.checked = false;
-        alert("Submitted")
+        NameInput.value = ""; 
         window.location.reload()
+        window.location.href = "signup_page2.html"
         }
     }
     span1.textContent = result;
