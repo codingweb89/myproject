@@ -14,7 +14,7 @@ body {
     position: relative;
     height: 100vh;
     background-attachment: fixed;
-    background-image: url(images/background_image.jpg);
+    background-image: url(images/pexels-buro-millennial-1438072.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,6 +52,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    color: #fff;
 }
 
 .first_container .first_child_container .contactdiv img {
@@ -73,6 +74,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    color: #fff;
 }
 .contacting .limit_phone {
     display: flex;
@@ -89,6 +91,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+.first_container .first_child_container .socialmedia a {
+    color: lightseagreen;
 }
 
 .first_container .first_child_container .socialmedia > div {
@@ -737,13 +743,13 @@ body {
 }
 
 
-.flex_students .each_students .first_each_students .students_image > span > img {
+/* .flex_students .each_students .first_each_students .students_image > span > img {
     width: 20px;
     height: 20px;
     filter: invert(100%);
     object-fit: contain;
     object-position: center;
-}
+} */
 
 .students_names {
     text-align: left;
@@ -850,18 +856,18 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    color: grey;
+    color: lightseagreen;
 }
 
 .partofImage > div:last-child > span:last-child {
     color: #20b2aa;
 }
 
-.partofImage > div > img {
+/* .partofImage > div > img {
     width: 15px;
     height: 15px;
     filter: invert(50%) sepia(95%) saturate(386%) hue-rotate(128deg) brightness(99%) contrast(83%)
-}
+} */
 
 .other_content {
     margin-top: 30px;
@@ -1045,13 +1051,13 @@ body {
     margin-top: 100px;
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    /* align-items: start; */
     flex-wrap: wrap;
     gap: 50px;
 }
-/* .closing_element_div > div {
+.closing_element_div > div {
     margin: 0 20px;
-} */
+}
 
 .closing_element_div .description_logo_ending {
     width: 200px;
@@ -1078,14 +1084,8 @@ body {
     height: 50px;
 }
 
-.closing_social_media img {
-    margin: 0 auto;
-    width: 20px;
-    height: 20px;
-    align-self: center;
-    object-fit: contain;
-    object-position: center;
-    filter: invert(100%);
+.closing_social_media > div > a > i {
+    color: #fff;
 }
 
 .go_margin_up {
@@ -1152,6 +1152,10 @@ body {
 
 .question_block:not(:last-child) {
     margin-bottom: 50px;
+}
+
+.question_block > i {
+    color: #20b2aa;
 }
 
 .question_block  > img {
@@ -1323,6 +1327,9 @@ body {
 
 
 @media screen and (max-width: 767px) {
+    .background {
+        background-position: left;
+    }
     /* .first_section {
         height: fit-content;
     } */
