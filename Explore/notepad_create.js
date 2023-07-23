@@ -6,7 +6,7 @@ function removeDisplay(element) {
     element.style.display = "none";
 }
 
-
+//Code not used in page
 const parent_setting = document.querySelectorAll(".parent_setting");
 parent_setting.forEach(eachSettings => {
     let childSetting = eachSettings.firstElementChild;
@@ -49,6 +49,8 @@ window.addEventListener("load", (e) => {
     titleInput.select();
 })
 
+
+//Code not used, this code consoles the result when the required key is pressed
 window.addEventListener("keydown", (e) => {
     if(e.ctrlKey && e.key === "+") {
         console.log("Control plus pressed")
@@ -219,10 +221,12 @@ const doctypeChildDiv = doctypeDiv.querySelectorAll("div").forEach(each => {
 })
 
 
+//Set localStorage
 function setLocalStorage(key, value) {
     localStorage.setItem(key, value)
 }
 
+//Get localStorage
 function getLocalStorage(key) {
     return localStorage.getItem(key)
 }
@@ -245,6 +249,8 @@ document.querySelector(".exitsaveas").addEventListener("click", () => {
 const editDiv = document.getElementById("EditDiv");
 const editDivLi = editDiv.querySelectorAll("li");
 
+
+//All editing functions
 function undoFunc() {
     document.execCommand("undo", false, null);
 }
@@ -284,6 +290,7 @@ function underlineFunc() {
 }
 
 
+//Targets the editing option in the page
 editDivLi.forEach(each => {
     each.addEventListener("click", (e) => {
         switch(e.target.textContent) {
@@ -307,16 +314,17 @@ editDivLi.forEach(each => {
 })
 
 
-let z = 100;
-
+//functions that opens an element
 function openDisplay(element) {
     element.style.display = "block";
 }
+
+//functions that closes an element
 function closeDisplay(element) {
     element.style.display = "none";
-    // element.style.zIndex = "0";
-    // z = 0;
 }
+
+//functions that creates a date
 function createDate(element) {
     let d = new Date();
     let date = d.toLocaleString();
@@ -377,6 +385,7 @@ closeReplaceDiv.onclick = function() {
 }
 
 
+//Selects all document
 function selectAllDoc(element) {
     let range = document.createRange();
     range.selectNodeContents(element);
@@ -590,6 +599,7 @@ sizeSelect.addEventListener("change", (e) => {
 })
 
 
+//Sets body fonts
 function submitFontQuestionaiire() {
     openDisplay(preloader)
     pageData["fontName"] = selectInputFont.value;
@@ -630,6 +640,7 @@ const showCase = document.querySelector(".showcase");
 const showCaseSpinner = document.querySelector(".showase_spinner")
 
 
+//Upload file
 function uploadChangeValue() {
     let value = event.target.files;
     let valueType = value[0].type;
@@ -748,6 +759,7 @@ document.querySelector("#cancelImage").onclick = () => {
 }
 
 
+//Fetch image url
 function fetchImageURLFunc() {
     let error = ""
     fetch(event.target.value)
@@ -798,28 +810,12 @@ document.getElementById("selectImage").addEventListener("click", () => {
 
 const lastObjectTrial = document.querySelector(".last_object");
 
-// function fetchReturnImageURL() {
-//     if(!event.target.value) return;
-//     if(event.target.value.trim() === "") return;
-//     let target = event.target.value;
-//     let img = new Image();
-//     img.onload = function() {
-//         img.src = target;
-//     }
-//     document.querySelector(".showcase_2").appendChild(img);
-// }
-
-// fetchImageURL.oninput = fetchReturnImageURL;
 
 
-`        openDisplay(showCaseSpinner)
-let insertImage = new Image("200px", "200px");
-insertImage.onload = function() {
-    insertImage.src = value;
-}
-document.querySelector(".showcase_2").appendChild(insertImage);
-closeDisplay(showCaseSpinner)`
 
+
+
+//function that runs the print.
 let newWindow;
 function openNewWindow() {
     newWindow = window.open("preview_notepad.html", "newWindow", "width=700,height=500");
@@ -836,6 +832,7 @@ function openNewWindow() {
 }
 
 
+//Downloads document
 function downloadWebsite() {
     if(getLocalStorage("doctype") === null) {
         openDisplay(saveAs);
@@ -924,4 +921,9 @@ document.getElementById("ok_notepad").onclick = function() {
     closeDisplay(document.querySelector(".about_notepad_fa"))
 }
 
-// setTimeout(openNewWindow, 3000)
+
+
+/*
+This is the informative code you need to read the above code. This code is brought to you by Gideon/uptodateacademy.
+All right reserved. Happy Coding!
+*/

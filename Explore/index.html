@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="CSS/font-awesome.min.css"> -->
     <link rel="stylesheet" href="CSS/font-awesome.css">
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
@@ -11,19 +11,32 @@
 <body>
 
 
+    <div class="opening_preloader">
+        <img src="images/airplane.png" alt="airplane" class="airplane">
+        <h3 class="loading_page">Loading page....</h3>
+        <img src="images/cloud.png" alt="cloud1" class="cloud1">
+        <img src="images/cloud.png" alt="cloud2" class="cloud2">
+        <img src="images/cloud.png" alt="cloud3" class="cloud3">
+    </div>
+
+
     <header class="first_header">
-        <section><img src="images/villey logo.png" alt="villey logo"></section>
+        <section><img src="images/villey logo.png" alt="villey logo" loading="lazy"></section>
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Explore</a></li>
                 <li><a href="">Tours</a></li>
                 <li><a href="">Blog</a></li>
-                <li><a href="">Education</a></li>
-                <li><a href=""><i class="fa fa-search"></i></a></li>
-                <li class="li-moon-o"><a href=""><i class="fa fa-moon-o"></i></a></li>
+                <li><a href="">Contact</a></li>
+                <!-- <li><a href=""><i class="fa fa-search"></i></a></li>
+                <li class="li-moon-o"><a href=""><i class="fa fa-moon-o"></i></a></li> -->
             </ul>
         </nav>
+        <div class="account_shopping">
+            <i class="fa fa-user-o fa-lg"></i>
+            <i class="fa fa-shopping-cart fa-lg"></i>
+        </div>
         <div class="for_opening_nav">
             <i class="fa fa-bars fa-lg hidden_bar"></i>
         </div>
@@ -32,7 +45,7 @@
     <section class="overall_image_section">
         <div class="overlay_div"></div>
         <section class="video_section">
-            <video src="videos/Untitled design.mp4" autoplay muted loop style="width: 100%; height: auto;"></video>
+            <video src="videos/desert sand.mp4" autoplay muted loop></video>
         </section>
         <section class="section_content">
             <div class="first_section_content">
@@ -71,6 +84,182 @@
         </nav>
     </aside>
 
+
+    <section class="category">
+        <section>
+            <img src="images/megaphone.png" alt="megaphone" loading="lazy">
+            <h3>Explore with affiliates</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium a veniam ipsa impedit dicta?</p>
+        </section>
+        <section>
+            <img src="images/man-in-suit-and-tie.png" alt="man in suite" loading="lazy">
+            <h3>VIP services</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium a veniam ipsa impedit dicta?</p>
+        </section>
+        <section>
+            <img src="images/shopping-cart.png" alt="shopping cart" loading="lazy">
+            <h3>Shop all your favorites</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium a veniam ipsa impedit dicta?</p>
+        </section>
+    </section>
+
+
+    <section class="timer_travel_ticket">
+        <section class="timer_section">
+            <span>Travel Leaders</span>
+            <h2>Vip conference 2023</h2>
+            <div><br></div>
+            <p>20-23 November 2023 - Los Angeles CA</p>
+            <div><br></div>
+            <div class="timer_div">
+                <div>
+                    <span>15</span>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <span>08</span>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <span>54</span>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <span>01</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </section>
+        <section class="conference_section">
+            <form method="get">
+                <h2>Secure Your Ticket</h2>
+                <input type="text" id="" placeholder="Enter your Name" required>
+                <input type="email" id="" placeholder="Enter your Email" required>
+                <input type="tel" id="" placeholder="Enter your Phone" required>
+                <input type="checkbox" id="" required>
+                <p>I have read and accept the <a href="">Terms & Conditions</a></p>
+                <button type="submit">Join Now</button>
+            </form>
+        </section>
+    </section>
+
+
+    <section class="background_hotel_section">
+        <section class="background_section">
+            <img src="images/misha-levko-Q5CDE10jr5o-unsplash.jpg" alt="misha" loading="lazy">
+        </section>
+        <section class="hotel_select">
+            <div class="first_form_div">
+                <form method="get">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <div>
+                            <label for="name_location">Location</label>
+                            <input type="text" id="name_location" placeholder="Where are you going?">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-calendar"></i>
+                        <div>
+                            <label for="date_location_1">Check in</label>
+                            <input type="text" id="date_location_1" placeholder="Add date">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa fa-calendar"></i>
+                        <div>
+                            <label for="date_location_2">Check out</label>
+                            <input type="text" id="date_location_2" placeholder="Add date">
+                        </div>
+                    </div>
+                    <div class="guest_div">
+                        <i class="fa fa-user-plus"></i>
+                        <div>
+                            <label for="guests">Guests</label>
+                            <input type="text" id="guests" placeholder="Where are you going?">
+                        </div>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+                <div class="guest_selection">
+                    <div>
+                        <span>Rooms</span>
+                        <div><i class="fa fa-minus"></i><span>1</span><i class="fa fa-plus"></i></div>
+                    </div>
+                    <div>
+                        <span>Adults</span>
+                        <div><i class="fa fa-minus"></i><span>1</span><i class="fa fa-plus"></i></div>
+                    </div>
+                    <div>
+                        <span>Children</span>
+                        <div><i class="fa fa-minus"></i><span>0</span><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="special_offers"><h2>Exploring Our Special Offers This Year 😎</h2></section>
+    <section class="advertisement_section">
+        <div><img src="images/Frame-3151-min.png" alt="ads one" loading="lazy"><div class="overlay_images"></div></div>
+        <div><img src="images/Frame-3150-min.png" alt="ads two" loading="lazy"><div class="overlay_images"></div></div>
+    </section>
+
+    <section class="top_destinations">
+        <h2>Top Destinations</h2>
+        <div class="next_previous_arrows">
+            <div><i class="fa fa-arrow-left fa-lg"></i></div>
+            <div><i class="fa fa-arrow-right fa-lg"></i></div>
+        </div>
+        <section class="img_section_destination">
+
+            <div>
+                <div>
+                    <div class="overlay_images"></div>
+                    <img src="images/olenka-kotyk-9TUkYXQKXec-unsplash.jpg" alt="California" loading="lazy">
+                </div>
+                <h3>California</h3>
+                <span>14 Hotels</span>
+            </div>
+            <div>
+                <div>
+                    <div class="overlay_images"></div>
+                    <img src="images/maarten-van-den-heuvel-gZXx8lKAb7Y-unsplash.jpg" alt="New York" loading="lazy">
+                </div>
+                <h3>New York City</h3>
+                <span>7 Hotels</span>
+            </div>
+            <div>
+                <div>
+                    <div class="overlay_images"></div>
+                    <img src="images/jesse-collins-TjwEbrhFVGE-unsplash.jpg" alt="New Jersey" loading="lazy">
+                </div>
+                <h3>New Jersey</h3>
+                <span>7 Hotels</span>
+            </div>
+            <div>
+                <div>
+                    <div class="overlay_images"></div>
+                    <img src="images/fiaz-mohammed-wL-kfSn_ttk-unsplash.jpg" alt="Los Angeles" loading="lazy">
+                </div>
+                <h3>Los Angeles</h3>
+                <span>13 Hotels</span>
+            </div>
+            <div>
+                <div>
+                    <div class="overlay_images"></div>
+                    <img src="images/luca-bravo-_QdFx92MO2U-unsplash.jpg" alt="San Francisco" loading="lazy">
+                </div>
+                <h3>San Francisco</h3>
+                <span>10 Hotels</span>
+            </div>
+            <!-- <div>
+                <img src="images/olenka-kotyk-9TUkYXQKXec-unsplash.jpg" alt="California">
+                <h3>California</h3>
+                <span>14 Hotels</span>
+            </div> -->
+        </section>
+    </section>
 
     <script src="index.js" defer></script>
 

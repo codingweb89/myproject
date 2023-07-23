@@ -6,6 +6,7 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -42,6 +43,7 @@ body {
     border-bottom: 1px solid grey;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tools_container button {
@@ -899,7 +901,7 @@ body {
 @media only screen and (max-width: 767px) {
     .editing_body {
         width: 100%;
-        margin: 30px 10px;
+        /* margin: 30px 10px; */
     }
 
     .thanks_div {
@@ -945,4 +947,9 @@ body {
     .add_title {
         width: 95%;
     }
+/* 
+    .tools_container {
+        overflow: auto;
+        overflow-wrap: break-word;
+    } */
 }

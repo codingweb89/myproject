@@ -2,39 +2,32 @@
 <html lang="en">
 <head>
     <style>
-        .container > span {
-            opacity: 0;
-            transition: all 1s;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(images/neom-rVC6O_gDE0Q-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
         }
 
-        .container > span.active {
-            transform: translateY(350px);
-            opacity: 1;
-        }
-
-        .image_slider {
+        div {
             width: 300px;
-            height: 200px;
-            box-shadow: 0 0 2px 1px;
+            height: 300px;
+            background: conic-gradient(
+                #fd004c,
+                #fe9000,
+                #fff020,
+                #3edf4b,
+                #3363ff,
+                #b102b7,
+                #fd004c
+            );
             margin: 20px;
-            overflow: auto;
-            display: grid;
-            grid-template-columns: repeat(var(--length), 1fr);
         }
-
-        .image_slider > img {
-            width: 300px;
-            height: 200px;
-            object-fit: auto;
-            object-position: center;
-            transition: all 5s;
-
-        }
-
-/* 
-        .image_slider > img.active {
-            opacity: 1;
-        } */
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,134 +35,8 @@
 </head>
 <body>
     
-<input type="text" name="" id="test">
 
-<img src="" alt="" id="insertImage">
-
-<button type="button" id="download_website" onclick="downloadWebsite()">Download Website</button>
-
-
-<div class="container">Animate This</div>
-
-
-<div class="image_slider">
-    <img src="images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="user">
-</div>
-
-
-<button type="button" id="next">Next</button>
-<button type="button" id="prev">Prev</button>
-
-<!-- <img src="images/albert-dera-ILip77SbmOE-unsplash.jpg" alt=""> -->
-<!-- <img src="images/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="" target="_blank">
-<img src="images/bench-accounting-C3V88BOoRoM-unsplash.jpg" alt="" target="_blank">
-<img src="images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="" target="_blank"> -->
-
-<script>
-
-
-let arrImg = [
-    `images/albert-dera-ILip77SbmOE-unsplash.jpg`,
-    `images/alex-suprun-ZHvM3XIOHoE-unsplash.jpg`,
-    `images/bench-accounting-C3V88BOoRoM-unsplash.jpg`,
-    `images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg`,
-    `images/albert-dera-ILip77SbmOE-unsplash.jpg`
-]
-
-let nav = 0;
-let imageSlider = document.querySelector(".image_slider");
-let sliderHTML = imageSlider.innerHTML;
-let img = imageSlider.querySelector("img");
-
-imageSlider.style.setProperty("--length", arrImg.length)
-
-function moveImg() {
-    img.src = arrImg[nav];
-    nav++;
-    if(nav >= arrImg.length) {
-        nav = 0;
-    }
-}
-
-let interval = setInterval(moveImg, 2000)
-
-
-document.getElementById("next").onclick = function() {
-    clearInterval(interval);
-    interval = null;
-    moveImg()
-};
-
-document.getElementById("next").addEventListener("mouseup", (e) => {
-    setTimeout(() => {
-        interval = setInterval(moveImg, 999)
-    }, 5000)
-})
-
-
-
-const container = document.querySelector(".container");
-let text = container.textContent;
-let split = text.split("");
-
-container.textContent = ""
-
-for(var i = 0; i < split.length; i++) {
-    container.innerHTML += "<span>" + split[i] + "</span>"
-}
-
-let char = 0;
-let span = container.querySelectorAll("span");
-function animate() {
-    span[char].classList.add("active");
-    char++;
-    if(char >= span.length) {
-        complete();
-        char = 0;
-    }
-}
-
-let timer = setInterval(animate, 50)
-
-function complete() {
-    clearInterval(timer)
-}
-
-console.log(span.length)
-
-
-
-
-
-const test = document.getElementById("test");
-const insertImage = document.getElementById("insertImage")
-test.oninput = function(event) {
-    fetch(event.target.value)
-    .then(response => response.blob())
-    .then(blob => {
-        let url = URL.createObjectURL(blob)
-        let img = new Image("200", "200");
-        img.src = url;
-        document.body.appendChild(img)
-    })
-}
-
-
-function downloadWebsite() {
-    let html = document.body.outerHTML;
-    let blob = new Blob([html], {type: "text/html"});
-    let url = URL.createObjectURL(blob);
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = "Website.html";
-    a.click();
-    // URL.revokeObjectURL(url);
-}
-
-
-
-
-</script>
+<div></div>
 
 
 </body>
