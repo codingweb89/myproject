@@ -35,18 +35,18 @@
             </ul>
         </nav>
         <div class="account_shopping">
-            <i class="fa fa-user-o fa-lg"></i>
-            <i class="fa fa-shopping-cart fa-lg"></i>
+            <div><i class="fa fa-user-circle fa-lg"></i></div>           
+            <div><i class="fa fa-shopping-cart fa-lg"></i><sup>10</sup></div>
         </div>
         <div class="for_opening_nav">
-            <i class="fa fa-bars fa-lg hidden_bar"></i>
+            <i class="fa fa-bars fa-lg hidden_bar" id="openbar"></i>
         </div>
     </header>
 
     <section class="overall_image_section">
         <div class="overlay_div"></div>
         <section class="video_section">
-            <video src="videos/desert sand.mp4" autoplay muted loop></video>
+            <!-- <video src="videos/desert sand.mp4" autoplay muted loop></video> -->
         </section>
         <section class="section_content">
             <div class="first_section_content">
@@ -65,8 +65,9 @@
     </section>
 
 
-    <aside class="first_aside">
-        <div class="exit_aside"><i class="fa fa-times fa-lg close_aside"></i></div>
+<section id="aside" class="first_aside">
+    <aside>
+        <div class="exit_aside"><i class="fa fa-times fa-lg close_aside" id="closeAside"></i></div>
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
@@ -84,6 +85,7 @@
             </div>
         </nav>
     </aside>
+</section>
 
 
     <section class="category">
@@ -200,10 +202,16 @@
         </section>
     </section>
 
-    <section class="special_offers"><h2>Exploring Our Special Offers This Year 😎</h2></section>
+    <section class="special_offers"><h2 id="specialOfffer">Exploring Our Special Offers This Year 😎</h2></section>
     <section class="advertisement_section">
-        <div><img src="images/Frame-3151-min.png" alt="ads one" loading="lazy"><div class="overlay_images"></div></div>
-        <div><img src="images/Frame-3150-min.png" alt="ads two" loading="lazy"><div class="overlay_images"></div></div>
+        <div>
+            <img src="images/Frame-3151-min.png" alt="ads one" loading="lazy">
+            <!-- <div class="overlay_images"></div> -->
+        </div>
+        <div>
+            <img src="images/Frame-3150-min.png" alt="ads two" loading="lazy">
+            <!-- <div class="overlay_images"></div> -->
+        </div>
     </section>
 
     <section class="top_destinations">

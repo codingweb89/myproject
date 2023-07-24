@@ -8,15 +8,26 @@
         }
         body {
             width: 100%;
-            height: 100vh;
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(images/neom-rVC6O_gDE0Q-unsplash.jpg);
-            background-position: center;
-            background-size: cover;
         }
 
-        div {
+        .conic {
+            position: relative;
             width: 300px;
             height: 300px;
+            margin: 20px;
+            overflow: hidden;
+            background: red;
+            transform: scale(0.5);
+            z-index: 3;
+            border-radius: 20px;
+
+        }
+
+        .conic::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background: conic-gradient(
                 #fd004c,
                 #fe9000,
@@ -26,18 +37,169 @@
                 #b102b7,
                 #fd004c
             );
-            margin: 20px;
+            z-index: -1;
+            animation: identifier 1s linear infinite;
+            border-radius: 20px;
+        }
+
+        .conic::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: #262626;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+            /* animation: identifier 1s linear infinite; */
+        }
+
+        @keyframes identifier {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(360deg);}
+        }
+        span {
+            color: #fff;
+        }
+
+        .all {
+            background: purple;
+            margin: 0 30px;
+            width: 300px;
+        }
+
+        .all ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .all ul li a {
+            color: #000;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .all ul li {
+            position: relative;
+            color: #000;
+            margin: 15px 0;
+            transition: background 0.5s;
+        }
+
+        .all ul li:hover {
+            background: #fff;
+        }
+
+        .all ul li:hover::before {
+            box-shadow: 12px 10px #fff;
+        }
+
+        .all ul li:hover::after {
+            box-shadow: 3px -3px #fff;
+        }
+
+        .all ul li::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            /* box-shadow: 12px 10px #fff; */
+        }
+
+        .all ul li::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            /* box-shadow: 3px -2px #fff; */
         }
     </style>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/font-awesome.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     
 
-<div></div>
+<div class="conic"></div>
 
+
+<div class="all">
+    <ul>
+        <li><i class="fa fa-home"></i><a href="">Home</a></li>
+        <li><i class="fa fa-user"></i><a href="">About</a></li>
+        <li><i class="fa fa-phone"></i><a href="">Contact</a></li>
+        <li><i class="fa fa-shopping-cart"></i><a href="">Shop</a></li>
+    </ul>
+</div>
+
+
+
+<script type="module">
+
+
+
+
+
+
+
+
+
+
+"4n0YhAN3H0M4ARtysbdPIJ7rnsIb0FUcv-0Ox1dNB7mIGUAB"
+
+
+
+var url = 'https://api.currentsapi.services/v1/latest-news?' +
+    'language=us&' +
+    'apiKey=4n0YhAN3H0M4ARtysbdPIJ7rnsIb0FUcv-0Ox1dNB7mIGUAB';
+    // var req = new Request(url);
+    let req = new Request(url)
+    fetch(req)
+    .then(response => {
+        if(response.ok && response.status == 200) {
+            response.json()
+        }else {
+            console.log("Fetched but an error occured")
+        }
+    })
+    .then(result => console.log(result))
+    .catch((err) => {
+        console.log(err + "Error fetching file")
+    })
+
+
+
+
+let url2 = 'https://api.currentsapi.services/v1/search?' +
+            'keywords=Amazon&language=en&' + 
+            'apiKey=4n0YhAN3H0M4ARtysbdPIJ7rnsIb0FUcv-0Ox1dNB7mIGUAB';
+
+let req2 = new Request(url)
+console.log(fetch(req2))
+
+let pirates = "pirates"
+
+fetch("https://api.kickbox.com/v2/verify?email=bill.lumbergh@gamil.com&apikey={785a4948472a268d2bece52200cbeb0b3e5e2c8ffe18d173442af51d2e70e44a}")
+.then(response => response.json())
+.then(result => console.log(result))
+
+
+"785a4948472a268d2bece52200cbeb0b3e5e2c8ffe18d173442af51d2e70e44a"
+
+
+</script>
 
 </body>
 </html>

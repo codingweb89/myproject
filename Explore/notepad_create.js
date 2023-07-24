@@ -922,6 +922,10 @@ document.getElementById("ok_notepad").onclick = function() {
 }
 
 
+document.onclick = function(e) {
+    
+}
+
 
 /*
 This is the informative code you need to read the above code. This code is brought to you by Gideon/uptodateacademy.

@@ -6,8 +6,10 @@
 }
 
 body {
+    width: 100%;
     height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: auto;
 }
 
 .full_container.active {
@@ -174,6 +176,8 @@ body {
 
 .extra_child {
     display: none;
+    box-shadow: 0 0 2px 1px;
+    z-index: 1;
 }
 
 .child_setting {
@@ -185,10 +189,6 @@ body {
 
 #file {
     margin-left: 0;
-}
-
-.extra_child {
-    box-shadow: 0 0 2px 1px;
 }
 
 #file:hover .extra_child {

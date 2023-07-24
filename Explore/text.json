@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "name": "Uzuigwe Gideon",
+            "age": 12,
+            "occupation": "Student",
+            "location": {
+                "latitude": 1245453433,
+                "longitude": 343432523
+            },
+            "weather": "Good",
+            "wind": {
+                "east": 342432,
+                "west": 342343
+            }
+    }
+    ],
+    "nothing": [
+        {
+            "blah": "blah"
+        }
+    ]
+}
